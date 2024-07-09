@@ -17,9 +17,16 @@ export class HomeComponent implements OnInit {
     this.titleService.setTitle('MK-Home');
   }
 
-  ngOnInit() {
-    this.futureProject = this.projectService.getProjectById(1);
-    // this.checkScreenWidth();
+ async ngOnInit() { 
+try{
+
+  this.futureProject = this.projectService.getProjectById(1);
+  // this.checkScreenWidth();
+}
+catch (error) {
+      console.error('Error fetching project:', error);
+    }
+
   }
 
   // @HostListener('window:resize', ['$event'])
