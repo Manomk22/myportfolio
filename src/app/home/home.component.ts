@@ -19,17 +19,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.futureProject = this.projectService.getProjectById(1);
-    this.checkScreenWidth();
+    // this.checkScreenWidth();
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkScreenWidth();
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: any) {
+  //   this.checkScreenWidth();
+  // }
 
-  checkScreenWidth() {
-    this.isMobileView = window.innerWidth <= 768; // Adjust the breakpoint as needed
-  }
+  // checkScreenWidth() {
+  //   this.isMobileView = window.innerWidth <= 768; // Adjust the breakpoint as needed
+  // }
 
   nextImage() {
     if (this.currentIndex < this.futureProject.pictures.length - 1) {
